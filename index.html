@@ -14,10 +14,10 @@
 <body>
   <div class="row hide-on-small-only">
     <div class="col s6">
-      <iframe src="https://chat.fjordkraft.no" frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:70vh;border:1px solid #FD561F;"></iframe></iframe>
+      <iframe src="https://chat.fjordkraft.no" frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:80vh;border:1px solid #FD561F;"></iframe></iframe>
     </div>
     <div class="col s6">
-      <iframe id="iframe-offer" frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:70vh;border:1px solid black;"></iframe></iframe>
+      <iframe id="iframe-offer" frameborder="0" scrolling="yes" seamless="seamless" style="display:block; width:100%; height:80vh;border:1px solid black;"></iframe></iframe>
     </div>
   </div>
   <div class="row">
@@ -50,6 +50,12 @@
 
         <tbody>
           <tr>
+            <td>November 2020</td>
+            <td><a href="https://no.gnp.energy/?ref=product.jsp&abonkode=P201" rel="noopener noreferrer">https://no.gnp.energy/?ref=product.jsp&abonkode=P201</a></td>
+            <td>-32,5 øre/kWh</td>
+            <td>Ja</td>
+          </tr>
+          <tr>
             <td>Oktober 2020</td>
             <td><a href="https://www.agva.no/stromavtale/agva-spot-hostkampanje-2020/" rel="noopener noreferrer">https://www.agva.no/stromavtale/agva-spot-hostkampanje-2020/</a></td>
             <td>-32,5 øre/kWh</td>
@@ -64,9 +70,29 @@
         </tbody>
       </table>
     </div>
+    <div class="row">
+      <h5>Kunderådgivere</h5>
+      <table>
+        <thead>
+          <tr>
+            <th>Kallenavn</th>
+            <th>Kommentar</th>
+            <th>Når</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Marielle</td>
+            <td>Helt sjef. 🙂</td>
+            <td>27. okt. 2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <script>
-    const currentMatch = 'https://www.agva.no/stromavtale/agva-spot-hostkampanje-2020/';
+    const currentMatch = 'https://no.gnp.energy/?ref=product.jsp&abonkode=P201';
     const currentPrice = '-32,5 øre/kWh'
     const offerIframeEl = document.getElementById('iframe-offer');
     offerIframeEl.src = currentMatch;
@@ -89,4 +115,3 @@
 </body>
 
 </html>
-
