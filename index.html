@@ -44,27 +44,38 @@
             <th>Lagt til</th>
             <th>Lenke</th>
             <th>Pris</th>
+            <th>Varighet</th>
             <th>Kun nye kunder</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
+            <td>Desember 2020</td>
+            <td><a href="https://www.kraftriket.no/privat/stromavtaler/webspot/" rel="noopener noreferrer">https://www.kraftriket.no/privat/stromavtaler/webspot/</a></td>
+            <td>-14,5 øre/kWh</td>
+            <td>6 mnd.</td>
+            <td>Ja</td>
+          </tr>
+          <tr>
             <td>November 2020</td>
             <td><a href="https://no.gnp.energy/?ref=product.jsp&abonkode=P201" rel="noopener noreferrer">https://no.gnp.energy/?ref=product.jsp&abonkode=P201</a></td>
             <td>-32,5 øre/kWh</td>
+            <td>1 mnd.</td>
             <td>Ja</td>
           </tr>
           <tr>
             <td>Oktober 2020</td>
             <td><a href="https://www.agva.no/stromavtale/agva-spot-hostkampanje-2020/" rel="noopener noreferrer">https://www.agva.no/stromavtale/agva-spot-hostkampanje-2020/</a></td>
             <td>-32,5 øre/kWh</td>
+            <td>1 mnd.</td>
             <td>Ja</td>
           </tr>
           <tr>
             <td>Oktober 2020</td>
             <td><a href="hhttps://norgesenergi.no/kampanje/en-maned-gratis-strom/" rel="noopener noreferrer">https://norgesenergi.no/kampanje/en-maned-gratis-strom/</a></td>
             <td>Gratis</td>
+            <td>1 mnd.</td>
             <td>Ja</td>
           </tr>
         </tbody>
@@ -83,6 +94,11 @@
 
         <tbody>
           <tr>
+            <td>Tine</td>
+            <td>Helt sjef. 🙂</td>
+            <td>27. nov. 2020</td>
+          </tr>
+          <tr>
             <td>Kenneth</td>
             <td>Helt sjef. 🙂</td>
             <td>30. okt. 2020</td>
@@ -97,8 +113,9 @@
     </div>
   </div>
   <script>
-    const currentMatch = 'https://no.gnp.energy/?ref=product.jsp&abonkode=P201';
-    const currentPrice = '-32,5 øre/kWh'
+    const currentMatch = 'https://www.kraftriket.no/privat/stromavtaler/webspot/';
+    const currentPrice = '-14,5 øre/kWh';
+    const currentLength = 6; // months
     const offerIframeEl = document.getElementById('iframe-offer');
     offerIframeEl.src = currentMatch;
     const currentMatchChatEl = document.getElementById('chat-specific');
@@ -107,10 +124,16 @@
       date = new Date(date.setMonth(date.getMonth() + 1));
     }
     const currentMonth = date.toLocaleString('no', { month: 'long' });
-    if (currentPrice) {
-      currentMatchChatEl.innerHTML = 'Hei! 🙂\nMobilnummer MOBIL. Kan dere matche ' + currentMatch + ' (' + currentPrice + ') for meg for hele ' + currentMonth + '?';
+    var currentPeriod;
+    if (currentLength == 1) {
+      currentPeriod = 'hele ' + currentMonth;
     } else {
-      currentMatchChatEl.innerHTML = 'Hei! :)\nMobilnummer MOBIL. Kan dere matche ' + currentMatch + ' for meg for hele ' + currentMonth + '?';
+      currentPeriod = 'i ' + currentLength + ' måneder' + ' fra og med ' + currentMonth
+    }
+    if (currentPrice) {
+      currentMatchChatEl.innerHTML = 'Hei! 🙂\nMobilnummer MOBIL. Kan dere matche ' + currentMatch + ' (' + currentPrice + ') for meg for ' + currentPeriod + '?';
+    } else {
+      currentMatchChatEl.innerHTML = 'Hei! :)\nMobilnummer MOBIL. Kan dere matche ' + currentMatch + ' for meg for ' + currentPeriod + '?';
     }
     const genericMatchChatEl = document.getElementById('chat-generic');
     genericMatchChatEl.innerHTML = 'Hei!\nMobilnummer MOBIL. Kan dere matche LINK (PRIS) for meg for hele ' + currentMonth + '?';
