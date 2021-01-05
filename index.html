@@ -8,7 +8,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prismatch</title>
-  <link rel="shortcut icon" href="https://roysolberg.com/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -50,6 +49,13 @@
         </thead>
 
         <tbody>
+          <tr>
+            <td>Januar 2021</td>
+            <td><a href="https://no.gnp.energy/product?abonkode=P272" rel="noopener noreferrer">https://no.gnp.energy/product?abonkode=P272</a></td>
+            <td>7,25 øre/kWh</td>
+            <td>2 mnd.</td>
+            <td>Ja</td>
+          </tr>
           <tr>
             <td>Desember 2020</td>
             <td><a href="https://www.kraftriket.no/privat/stromavtaler/webspot/" rel="noopener noreferrer">https://www.kraftriket.no/privat/stromavtaler/webspot/</a></td>
@@ -94,6 +100,11 @@
 
         <tbody>
           <tr>
+            <td>Helene</td>
+            <td>Helt sjef. 🙂</td>
+            <td>05. jan. 2021</td>
+          </tr>
+          <tr>
             <td>Tine</td>
             <td>Helt sjef. 🙂</td>
             <td>27. nov. 2020</td>
@@ -113,9 +124,9 @@
     </div>
   </div>
   <script>
-    const currentMatch = 'https://www.kraftriket.no/privat/stromavtaler/webspot/';
-    const currentPrice = '-14,5 øre/kWh';
-    const currentLength = 6; // months
+    const currentMatch = 'https://no.gnp.energy/product?abonkode=P272';
+    const currentPrice = '7,25 øre/kWh';
+    const currentLength = 2; // months
     const offerIframeEl = document.getElementById('iframe-offer');
     offerIframeEl.src = currentMatch;
     const currentMatchChatEl = document.getElementById('chat-specific');
